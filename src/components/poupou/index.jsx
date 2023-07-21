@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import audioFile from "./1.mp3";
 
 export const Poupou = () => {
     const [countdown, setCountdown] = useState({});
@@ -34,7 +35,9 @@ export const Poupou = () => {
         <div
             className={`flex min-h-screen bg-gradient-to-b	from-[#FCE9F1] to-[#F1D4E5] flex-col items-center justify-between p-24 pt-12 relative`}
         >
-            <iframe border="0" width='330' height='86' src="https://music.163.com/outchain/player?type=2&id=27813824&auto=1&height=66"></iframe>
+            <audio src={audioFile} autoPlay controls>
+                Your browser does not support the audio element.
+            </audio>
             <div className="animate__animated animate__fadeInLeft chat chat-start">
             <div className="chat-bubble text-white bg-[#96c6f9]">Hi, <br/>自从上次一别,我们也是好久没见了呢！</div>
             </div>
