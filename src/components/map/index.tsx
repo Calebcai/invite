@@ -47,7 +47,8 @@ export const Map = () => {
         return (
             <>
                 <div className='text-center font-semibold text-xl p-10'>
-                    位置信息
+                    <p>位置信息</p>
+                    <p className="text-sm">geolocation</p>
                 </div>
                 <div className="card w-full glass">
                     <figure>
@@ -55,7 +56,7 @@ export const Map = () => {
                     </figure>
                     <div className="card-body">
                         <h2 className="card-title">维也纳国际酒店</h2>
-                        <p>地址：福建省宁德市霞浦县维也纳国际酒店</p>
+                        <p>地址：福建省宁德市霞浦县维也纳国际酒店7层维也纳厅</p>
                         <div className="card-actions justify-center">
                             <button className="btn btn-success" onClick={() => {
                                 window.location.href = "https://apis.map.qq.com/uri/v1/routeplan?type=drive&from=我的位置&tocoord=26.8771,120.0056&to=霞浦维也纳国际酒店&referer=霞浦维也纳国际酒店";

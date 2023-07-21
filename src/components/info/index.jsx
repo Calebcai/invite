@@ -72,7 +72,7 @@ export default function Infomation() {
         />
       ))}
       <div className="hero-content text-center text-neutral-content absolute top-1/2 -translate-y-1/2">
-         <div className="max-w-md">
+         <div className="animate-gradient-slide max-w-md bg-gradient-to-r from-[#2626269e] via-[#393e46d5] to-[#262626ad] text-transparent bg-clip-text">
            <h1 className="mb-5 text-5xl font-bold">登记信息</h1>
           <p className="mb-5">
                    欢迎参加我们的婚礼，请点击按钮登记来宾信息！<br />

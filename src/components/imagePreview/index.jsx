@@ -32,7 +32,11 @@ export default function ImgPreview() {
 
   return (
     <div className="min-h-screen bg-slate-300">
-      <div className="text-center font-apercu text-xl pt-10 font-bold">照片墙</div>
+      <div className="text-center font-apercu text-xl pt-10 font-bold">
+        <p>照片展示</p>
+        <p className="text-sm">Photo Showcase</p>
+        
+      </div>
       {/*<!-- Component: Carousel with controls outside --> */}
       <div className="glide-04 relative w-full min-h-screen p-5">
         {/*    <!-- Slides --> */}
@@ -119,9 +123,15 @@ export default function ImgPreview() {
             </li>
           </ul>
         </div>
-        <div className="text-center text-50 text-[#FFFFFF] font-semibold absolute top-1/2 -translate-y-1/2">
-          <p>爱情，众水不能熄灭，大水也不能淹没。</p>
-          <p>Many waters cannot quench love; rivers cannot sweep it away.</p>
+        <div className="mt-10 text-center text-50 text-[#FFFFFF] font-semibold absolute top-1/2 -translate-y-1/2">
+          <p>新郎：蔡基培 💗 新娘：汝肖倩</p>
+          <p>2023.9.16 17:00</p>
+          <br />
+          <p  className="text-[#feffb5]">爱情，众水不能熄灭，大水也不能淹没。</p>
+          <p className="text-[#f7f8cd]">Many waters cannot quench love; rivers cannot sweep it away.</p>
+          <br />
+          <p>良人属我，我也属他。</p>
+          <p>My beloved is mine, and I am his.</p>
         </div>
       </div>
     </div>
