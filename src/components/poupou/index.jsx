@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react'
-import audioFile from "./1.mp3";
+import React, { useState, useEffect, useRef } from 'react'
 
 export const Poupou = () => {
     const [countdown, setCountdown] = useState({});
-
+    const refMusic = useRef(null)
     useEffect(() => {
         const targetDate = new Date('2023-09-16');
         const interval = setInterval(() => {
@@ -34,7 +33,7 @@ export const Poupou = () => {
     return (
         <div
             className={`flex min-h-screen bg-gradient-to-b	from-[#FCE9F1] to-[#F1D4E5] flex-col items-center justify-between p-24 pt-12 relative`}
-        >
+        >   
             <div className="animate__animated animate__fadeInLeft chat chat-start">
             <div className="chat-bubble text-white bg-[#96c6f9]">Hi, <br/>自从上次一别,我们也是好久没见了呢！</div>
             </div>

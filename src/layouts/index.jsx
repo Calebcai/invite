@@ -1,10 +1,16 @@
 import { useRef } from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+import audioFile from "./getvoice.mp3";
 
 export default function Layout(props) {
   const parallax = useRef(null);
   return (
     <div style={{ width: "100%", height: "100%", background: "#253237" }}>
+      <div className="flex justify-center" style={{ background: 'rgb(250 231 239)' }}>
+        <audio autoPlay controls="controls">
+          <source src={audioFile} type="audio/mpeg" />
+        </audio>
+      </div>
       <Parallax ref={parallax} pages={5}>
         <ParallaxLayer
           offset={0}
@@ -46,7 +52,7 @@ export default function Layout(props) {
         />
         <ParallaxLayer
           offset={4}
-          style={{ opacity: 1, backgroundColor: "transparent" }}
+          style={{ opacity: 0.8, backgroundColor: "transparent" }}
         >
           {props.children[4]}
         </ParallaxLayer>

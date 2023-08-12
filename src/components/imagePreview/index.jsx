@@ -35,7 +35,7 @@ export default function ImgPreview() {
 
   return (
     <div className="min-h-screen bg-slate-300">
-      <div className="pt-10 text-xl font-bold text-center font-apercu">
+      <div className="pt-10 text-xl font-bold text-center text-black font-apercu">
         <p>吾家有喜</p>
         <p className="text-sm">My family has happy things</p>
       </div>

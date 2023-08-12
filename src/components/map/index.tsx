@@ -46,7 +46,7 @@ export const Map = () => {
 
         return (
             <div className='bg-[#cbc4e4]'>
-                <div className='p-10 text-xl font-semibold text-center'>
+                <div className='p-10 text-xl font-semibold text-center text-black'>
                     <p>位置信息</p>
                     <p className="text-sm">geolocation</p>
                 </div>
@@ -54,7 +54,7 @@ export const Map = () => {
                     <figure>
                         <img src="https://ak-d.tripcdn.com/images/200s13000000ukahj03BF_Z_960_660_R5_D.jpg_.webp" alt="酒店" />
                     </figure>
-                    <div className="card-body">
+                    <div className="text-black card-body">
                         <h2 className="card-title">维也纳国际酒店</h2>
                         <p>地址：福建省宁德市霞浦县维也纳国际酒店7层维也纳厅</p>
                         <div className="justify-center card-actions">
