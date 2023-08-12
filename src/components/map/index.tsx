@@ -62,7 +62,7 @@ export const Map = () => {
                                 window.location.href = "https://apis.map.qq.com/uri/v1/routeplan?type=drive&from=我的位置&tocoord=26.8771,120.0056&to=霞浦维也纳国际酒店&referer=霞浦维也纳国际酒店";
                             }}>微信内查看导航</button>
                             <button className="btn btn-info" onClick={openGaodeMap}>去高德地图导航</button>
-                            <button className="btn bg-[#e4d87c]" onClick={openBaiduMap}>去百度地图导航</button>
+                            <button className="btn btn-warning" onClick={openBaiduMap}>去百度地图导航</button>
                             {/* <button className="btn btn-primary" onClick={() => {
                             if (wx) {
                                 wx.miniProgram.navigateTo({
