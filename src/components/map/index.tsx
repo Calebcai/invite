@@ -45,24 +45,24 @@ export const Map = () => {
     };
 
         return (
-            <>
-                <div className='text-center font-semibold text-xl p-10'>
+            <div className='bg-[#cbc4e4]'>
+                <div className='p-10 text-xl font-semibold text-center'>
                     <p>位置信息</p>
                     <p className="text-sm">geolocation</p>
                 </div>
-                <div className="card w-full glass">
+                <div className="w-full card glass">
                     <figure>
                         <img src="https://ak-d.tripcdn.com/images/200s13000000ukahj03BF_Z_960_660_R5_D.jpg_.webp" alt="酒店" />
                     </figure>
                     <div className="card-body">
                         <h2 className="card-title">维也纳国际酒店</h2>
                         <p>地址：福建省宁德市霞浦县维也纳国际酒店7层维也纳厅</p>
-                        <div className="card-actions justify-center">
+                        <div className="justify-center card-actions">
                             <button className="btn btn-success" onClick={() => {
                                 window.location.href = "https://apis.map.qq.com/uri/v1/routeplan?type=drive&from=我的位置&tocoord=26.8771,120.0056&to=霞浦维也纳国际酒店&referer=霞浦维也纳国际酒店";
                             }}>微信内查看导航</button>
                             <button className="btn btn-info" onClick={openGaodeMap}>去高德地图导航</button>
-                            <button className="btn btn-primary" onClick={openBaiduMap}>去百度地图导航</button>
+                            <button className="btn bg-[#e4d87c]" onClick={openBaiduMap}>去百度地图导航</button>
                             {/* <button className="btn btn-primary" onClick={() => {
                             if (wx) {
                                 wx.miniProgram.navigateTo({
@@ -75,6 +75,6 @@ export const Map = () => {
                         </div>
                     </div>
                 </div>
-            </>
+            </div>
         )
     }

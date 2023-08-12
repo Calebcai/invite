@@ -1,7 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Glide from "@glidejs/glide";
+import { list } from "postcss";
 
 export default function ImgPreview() {
+  const countArray = Array.from({ length: 17 }, (_, index) => index + 1);
+
   useEffect(() => {
     const slider = new Glide(".glide-04", {
       type: "carousel",
@@ -32,96 +35,36 @@ export default function ImgPreview() {
 
   return (
     <div className="min-h-screen bg-slate-300">
-      <div className="text-center font-apercu text-xl pt-10 font-bold">
+      <div className="pt-10 text-xl font-bold text-center font-apercu">
         <p>照片展示</p>
         <p className="text-sm">Photo Showcase</p>
         
       </div>
       {/*<!-- Component: Carousel with controls outside --> */}
-      <div className="glide-04 relative w-full min-h-screen p-5">
+      <div className="relative w-full min-h-screen p-5 glide-04">
         {/*    <!-- Slides --> */}
-        <div className="overflow-hidden  shadow-2xl" data-glide-el="track">
+        <div className="overflow-hidden shadow-2xl" data-glide-el="track">
           <ul className="whitespace-no-wrap flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform] relative flex w-full overflow-hidden p-0">
-            <li>
-              <img
-                src="/lunbo/MIN_2370.jpg"
-                className="m-auto max-h-full w-full max-w-full"
-              />
-            </li>
-            <li>
-              <img
-                src="/lunbo/MIN_2597.jpg"
-                className="m-auto max-h-full w-full max-w-full"
-              />
-            </li>
-            <li>
-              <img
-                src="/lunbo/MIN_2710.jpg"
-                className="m-auto max-h-full w-full max-w-full"
-              />
-            </li>
-            <li>
-              <img
-                src="/lunbo/MIN_2794.jpg副本.jpg"
-                className="m-auto max-h-full w-full max-w-full"
-              />
-            </li>
-            <li>
-              <img
-                src="/lunbo/MIN_2825.jpg"
-                className="m-auto max-h-full w-full max-w-full"
-              />
-            </li>
-            <li>
-              <img
-                src="/lunbo/MIN_2915.jpg"
-                className="m-auto max-h-full w-full max-w-full"
-              />
-            </li>
-            
-            <li>
-              <img
-                src="/lunbo/MIN_2945.jpg"
-                className="m-auto max-h-full w-full max-w-full"
-              />
-            </li>
-            <li>
-              <img
-                src="/lunbo/MIN_2975.jpg"
-                className="m-auto max-h-full w-full max-w-full"
-              />
-            </li>
-            <li>
-              <img
-                src="/lunbo/MIN_3010.jpg副本.jpg"
-                className="m-auto max-h-full w-full max-w-full"
-              />
-            </li>
-            <li>
-              <img
-                src="/lunbo/MIN_3011.jpg"
-                className="m-auto max-h-full w-full max-w-full"
-              />
-            </li>
-            <li>
-              <img
-                src="/lunbo/MIN_3062.jpg"
-                className="m-auto max-h-full w-full max-w-full"
-              />
-            </li>
-            <li>
-              <img
-                src="/lunbo/MIN_3081.jpg"
-                className="m-auto max-h-full w-full max-w-full"
-              />
-            </li>
-            <li>
-              <img
-                src="/lunbo/MIN_3134.jpg"
-                className="m-auto max-h-full w-full max-w-full"
-              />
-            </li>
+            {countArray.map((num) => (
+              <li>
+                <img
+                  src={`/lunbo/${num}.jpg`}
+                  className="w-full max-w-full max-h-full m-auto"
+                />
+              </li>
+            ))}
           </ul>
+          {/* todo */}
+          {/* <div className="absolute flex justify-between left-5 right-5" style={{ top: '100px', opacity: 0.4 }}>
+            <a href="#slide1" onClick={()=>{
+              
+            }} className="w-5 h-5 btn btn-circle">❮</a> 
+            <a href="#slide3"
+            onClick={()=>{
+              
+            }} 
+            className="w-5 h-5 btn btn-circle">❯</a>
+          </div> */}
         </div>
         <div className="mt-10 text-center text-50 text-[#FFFFFF] font-semibold absolute top-1/2 -translate-y-1/2">
           <p>新郎：蔡基培 💗 新娘：汝肖倩</p>

@@ -35,9 +35,6 @@ export const Poupou = () => {
         <div
             className={`flex min-h-screen bg-gradient-to-b	from-[#FCE9F1] to-[#F1D4E5] flex-col items-center justify-between p-24 pt-12 relative`}
         >
-            <audio src={audioFile} autoPlay controls>
-                Your browser does not support the audio element.
-            </audio>
             <div className="animate__animated animate__fadeInLeft chat chat-start">
             <div className="chat-bubble text-white bg-[#96c6f9]">Hi, <br/>自从上次一别,我们也是好久没见了呢！</div>
             </div>

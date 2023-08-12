@@ -21,7 +21,7 @@ export default function Layout(props) {
         <ParallaxLayer
           offset={1}
           speed={1}
-          style={{ opacity: 1, backgroundColor: "skyblue" }}
+          // style={{ opacity: 1, backgroundColor: "skyblue" }}
         >
           {props.children[1]}
         </ParallaxLayer>
