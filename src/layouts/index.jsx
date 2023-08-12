@@ -5,7 +5,7 @@ export default function Layout(props) {
   const parallax = useRef(null);
   return (
     <div style={{ width: "100%", height: "100%", background: "#253237" }}>
-      <Parallax ref={parallax} pages={4}>
+      <Parallax ref={parallax} pages={5}>
         <ParallaxLayer
           offset={0}
           speed={0}
@@ -38,6 +38,17 @@ export default function Layout(props) {
           style={{ opacity: 1, backgroundColor: "transparent" }}
         >
           {props.children[3]}
+        </ParallaxLayer>
+        <ParallaxLayer
+          offset={4}
+          speed={-0.1}
+          style={{ backgroundColor: "rgb(203 213 225)", opacity: 0.3 }}
+        />
+        <ParallaxLayer
+          offset={4}
+          style={{ opacity: 1, backgroundColor: "transparent" }}
+        >
+          {props.children[4]}
         </ParallaxLayer>
       </Parallax>
     </div>

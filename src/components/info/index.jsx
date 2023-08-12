@@ -27,34 +27,12 @@ import { useTransition, animated } from "@react-spring/web";
 import styles from "./styles.module.css";
 
 const slides = [
+  '/images/1.jpg'
 ];
 
 export default function Infomation() {
-  const [index, set] = useState(0);
-  const transitions = useTransition(index, {
-    key: index,
-    from: { opacity: 0 },
-    enter: { opacity: 1 },
-    leave: { opacity: 0, delay: 3000 },
-    config: { duration: 3000 },
-    onRest: (_a, _b, item) => {
-      if (index === item) {
-        set((state) => (state + 1) % slides.length);
-      }
-    },
-    exitBeforeEnter: true,
-  });
   return (
-    <div className="min-h-screen bg-[#c0c3c653]">
-      {transitions((style, i) => (
-        <animated.div
-          className={styles.bg}
-          style={{
-            ...style,
-            backgroundImage: `url(${slides[i]})`,
-          }}
-        />
-      ))}
+    <div className="min-h-screen" style={{ backgroundImage: `url(${slides[0]})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
       <div className="absolute text-center -translate-y-1/2 hero-content text-neutral-content top-1/2">
          <div className="animate-gradient-slide max-w-md bg-gradient-to-r from-[#2626269e] via-[#393e46d5] to-[#262626ad] text-transparent bg-clip-text">
            <h1 className="mb-5 text-5xl font-bold">登记信息</h1>

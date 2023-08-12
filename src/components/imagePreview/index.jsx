@@ -36,17 +36,16 @@ export default function ImgPreview() {
   return (
     <div className="min-h-screen bg-slate-300">
       <div className="pt-10 text-xl font-bold text-center font-apercu">
-        <p>照片展示</p>
-        <p className="text-sm">Photo Showcase</p>
-        
+        <p>吾家有喜</p>
+        <p className="text-sm">My family has happy things</p>
       </div>
       {/*<!-- Component: Carousel with controls outside --> */}
       <div className="relative w-full min-h-screen p-5 glide-04">
         {/*    <!-- Slides --> */}
         <div className="overflow-hidden shadow-2xl" data-glide-el="track">
           <ul className="whitespace-no-wrap flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform] relative flex w-full overflow-hidden p-0">
-            {countArray.map((num) => (
-              <li>
+            {countArray.map((num, index) => (
+              <li key={index}>
                 <img
                   src={`/lunbo/${num}.jpg`}
                   className="w-full max-w-full max-h-full m-auto"
