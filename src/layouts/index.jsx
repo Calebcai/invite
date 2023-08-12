@@ -5,10 +5,10 @@ import audioFile from "./getvoice.mp3";
 export default function Layout(props) {
   const parallax = useRef(null);
   return (
-    <div style={{ width: "100%", height: "100%", background: "#253237" }}>
-      <div className="flex justify-center" style={{ background: 'rgb(250 231 239)' }}>
+    <div style={{ width: "100%", height: "100%" }}>
+      <div className="absolute -translate-x-1/2 left-1/2" style={{mixBlendMode:'difference', zIndex:999}}>
         <audio autoPlay controls="controls">
-          <source src={audioFile} type="audio/mpeg" />
+          <source src={'https://res.wx.qq.com/voice/getvoice?mediaid=MzIwNjM3MDk0Ml8yMjQ3NDg2MDE2'} type="audio/mpeg" />
         </audio>
       </div>
       <Parallax ref={parallax} pages={5}>
