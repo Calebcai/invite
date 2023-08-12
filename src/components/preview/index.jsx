@@ -67,7 +67,7 @@ const Preview = () => {
       }}>
         <Image
           alt={'test'}
-          src={'../../../public/images/1.jpg'}
+          src={'/images/1.jpg'}
           overlayContent={mask}
           overlayTrigger="hover"
           fit="contain"
